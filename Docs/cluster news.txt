@@ -1,0 +1,5 @@
+(1) MinHash clustering 
+(2) Probabilistic Latent Semantic Indexing 
+(3) Covisitation
+http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.80.4329&rep=rep1&type=pdf
+https://stackoverflow.com/questions/784602/news-clustering

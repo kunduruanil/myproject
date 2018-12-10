@@ -1,0 +1,8 @@
+2018-12-07 19:51:12,584 getting all the urls of Area : hyderabad started
+2018-12-07 19:51:12,585 url https://telanganatoday.com started
+2018-12-07 19:51:23,698 url https://www.thehindu.com started
+2018-12-07 19:51:27,918 url https://english.sakshi.com/ started
+2018-12-07 19:51:28,837 completed getting all the urls for the Area: hyderabad and length of urls: 266
+2018-12-07 19:51:28,838 get news to dataframe loop started for Area: hyderabad
+2018-12-07 19:55:47,802 newpaper library failed for url: https://telanganatoday.com/ec-approves-7-more-polling-stations-in-hyderabad
+2018-12-07 20:02:35,897 dataframe for Area: hyderabad completed

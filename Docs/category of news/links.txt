@@ -1,0 +1,3 @@
+https://github.com/isthegeek/News-Classification
+https://ahmedbesbes.com/how-to-mine-newsfeed-data-and-extract-interactive-insights-in-python.html
+https://datascience.stackexchange.com/questions/23323/public-dataset-for-news-articles-with-their-associated-categories
