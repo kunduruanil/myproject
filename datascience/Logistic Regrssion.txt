@@ -1,0 +1,76 @@
+sklearn:https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html#sklearn.linear_model.LogisticRegression
+basics :https://towardsdatascience.com/logit-of-logistic-regression-understanding-the-fundamentals-f384152a33d1
+***https://www.geeksforgeeks.org/understanding-logistic-regression/
+The aim of logistic regression is to predict some unknown probability P for a successful event
+
+interview qns:https://www.analyticsvidhya.com/blog/2017/08/skilltest-logistic-regression/
+
+1. diffrence between Logistic Regression and Linear Regression?
+Ans:Linear fit a single stright line , logistic use sigmod funtion to diffrenciate data points.
+"Least Square Error" method estimate for training a linear regression. 
+"maximum likely hood" method  estimate for training a logistic regression.=So,  maximizing the (log) likelihood is equivalent to minimizing the binary cross entropy.
+
+2. why logistic regression called regression ?
+ans: same linear regresion the funtion y=mx+c logistic funtuntion  y=sigmod(mx+c)
+
+3.Is it possible to apply a logistic regression algorithm on a 3-class Classification problem?
+ans:We can use One Vs all method for 3 class classification in logistic regression.
+
+4.Which of the following methods do we use to best fit the data in Logistic Regression?
+ans:Logistic regression uses maximum likely hood estimate for training a logistic regression.
+
+5.Regularization L1 and L2
+
+L1 -lasso added to loss funtion with |X| were X--magnitude(sum of weights * lambda)lambda--larning rate
+L2 - Ridge added X^2
+
+6.maximum likelihood logistic regression:https://www.analyticsvidhya.com/blog/2018/07/introductory-guide-maximum-likelihood-estimation-case-study-r/
+maximum likelihood procedure and loglikelihood: https://campus.datacamp.com/courses/introduction-to-linear-modeling-in-python/estimating-model-parameters?ex=5
+ans: estimating population parameters such as the mean and variance were least square error need mean and vairance to calculate.
+this method is sujjested when data is not notmally distributed and it find estimators like means and variance by maximum of values is close when apply y=mxc
+youtube video better explned it.
+
+7.what is Akaike information criterion (AIC) method for testing perfomence of Logistic Regression like R^2 in Linear Regression:
+ans: AIC : N*log(sum(errors^2)/2)+2K were N is number of observations and K is number of features +1 
+AIC values is less than model best fit.(where ever we get least AIC value that is the best model)
+
+8: Which of the following algorithms do we use for Variable Selection?
+ans:In case of lasso we apply a absolute penality, after increasing the penality in lasso some of the coefficient of variables may become zero.
+
+9.Linear Regression errors values has to be normally distributed but in case of Logistic Regression it is not the case --True
+
+10.define Odds:  probability of success to probability of failure.
+
+11. logit funtion : log(odds). odds=10th qn
+
+12.logistic funtion : inverse of logit funtion which is p/1-p=e^mx+x=>p=1/1+e^-(mx+c)  ==> inverse of logit funtion.
+
+13.sigmod funtion : is simelar to logistic funtion.
+
+14.One-Vs-All method in Logistic Regression:
+ans:If there are n classes, then n separate logistic regression has to fit, where the probability of each category is predicted over the rest of the categories combined.
+
+15.find the  local minimas  and stop trainning.
+
+16.logistic regression only forms linear decision surface, but the examples in the figure are not linearly separable.
+
+17.Slover parameters: https://stackoverflow.com/questions/38640109/logistic-regression-python-solvers-defintions
+**https://towardsdatascience.com/optimization-loss-function-under-the-hood-part-ii-d20a239cde11
+1.LIBLINEAR : supports logistic regression and linear support vector machines  uses :  coordinate descent (CD) - L1 n L2 supports
+2.SAG : Stochastic Average Gradient , supports only L2 ,used for large data sets because it is fast.
+3. SAGA : same as SAG supports L1 and L2
+4. newton-cg :  minimize the quadratic function	,L2 only. Newton’s Method gets an updated θ at the point of intersection of the tangent line of f(θ) at previous θ and x axis.
+5. lbfgs : when dataset is small, L-BFGS relatively performs the best same as newton-cg . L2 only
+
+18. LogisticRegression vs SVM : https://towardsdatascience.com/support-vector-machine-vs-logistic-regression-94cc2975433f
+
+19.change the learning rate for logistic regression use SGDClassifier.  https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.SGDClassifier.html
+
+20. Gradient Descent vs Stochastic Gradient Descent: SGD will have learning rate which will fastly understand the data where you need to subtrate error of one data point where as GD we need to summ all the errrors each time.
+https://towardsdatascience.com/difference-between-batch-gradient-descent-and-stochastic-gradient-descent-1187f1291aa1
+
+21. loss funtion for logistic-regression : https://towardsdatascience.com/@shuyuluo
+-ylog(y')-(1-y)log(1-y')
+
+22.class_weight='balanced': uses the values of y to automatically adjust weights inversely proportional to class frequencies in the input data
+class_weight='balanced_subsample': is the same as “balanced” except that weights are computed based on the bootstrap sample for every tree grown.

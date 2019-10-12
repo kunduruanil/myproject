@@ -1,0 +1,47 @@
+
+
+chi square :https://www.spss-tutorials.com/chi-square-independence-test/
+
+http://www.sthda.com/english/wiki/chi-square-test-of-independence-in-r 
+
+
+when you have outlayers median we can use.
+
+normal distribution:
+1. 65%data lys in mean+/- one sd,95% lys mean +/- 2sd , 98% data lys in mean +/- 3sd 
+2. using z score we can say prapanulity of any values if data is distributed normally. using z table or pnorn(x,mean,sd)(r code)
+3. how to check data is normally distributed or not using normal quantile plot. qqnorn(feature_colunm) (quantile quantile plot)
+4. what to do when data is not follow normal distribution : do log(feature) if after log if data falls normal than proced else try exponational transformation else recepocal tranfermation else 
+square root tranfermation else 1/square root tranfermation else go with non normal distribution algorithms.
+
+sample variance:
+taking random values from data set and mean will be random values.
+
+central limit theorem:
+1. if a population follows normal distribution then sample also follows normal distribution.
+2. if population not follow normal than sample is normal if data is fairly larger. 
+standard error- varibelity between samples will be mesured using 
+
+
+confidence intervel:
+1. prapanulity of simgle value is zero, so we come up with confidence intervel with some accuracy.
+sample mean +/- z(value for confidence percentage) * standard error (sd for population/square-root of smaple size)
+z value at 95% confidence is 1.96 and 90% is 1.64,99% is 2.58
+
+type 1 error : action should not taken but taken.
+type 2 error : action should take but not taken.
+
+Hypothesis Testing:
+1. null hypothesis.
+2. alternate hypothesis.
+
+***table 
+Y                         X                                           Test
+continous           Discrete in 2 categories                       2- saple t test.
+continous           Discrete in more than 2 categories             ANOVA - one way
+Discrete            Discrete in 2 categories                       2 proportion test
+Discrete            Discrete in more than 2 categories             chi-square test.
+
+
+
+71681044 - partha saradhi hcl

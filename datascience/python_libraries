@@ -1,0 +1,5 @@
+numpy:
+same in pandas.
+axis =0 is column wise operations.
+axis =1 is row wise operations.
+

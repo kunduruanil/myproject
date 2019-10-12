@@ -1,0 +1,62 @@
+
+Regularization: https://www.analyticsvidhya.com/blog/2018/04/fundamentals-deep-learning-regularization-techniques/
+
+1. keras.Regularization.L1(0.2) Dense(1,kernal_re=keras.Regularization.L1(0.2)) same as L2
+2. Dropout - keras.Dropout(0.2) after each layer we can add.
+3. Data argumentation ( fliping of images etc.)
+4. Early stop  used in fit funtion.
+
+
+Normalization of input values or features:
+1.x-mean
+2.x-standard_deviation
+3. z score (standadization sklearn)
+4. scaling or normalization (minmax scaling sklearn)
+
+weights initialization: used for vanising gradent problem ( in dense input layer)
+1.kernel_initializer='zeros'
+2.kernel_initializer='random_uniform'
+3.kernel_initializer='glorot_uniform' x=(sqrt(6/(fan-in+fan-out)))  , kernel_initializer='glorot_normal' mean=0 and variance= sqrt(2/(fan-in+fan-out)) - tanh activation works better.
+fan-in - number of features input ,fan-out - number of features output.
+4. kernel_initializer='he_uniform'  x=(sqrt(6/fan-in)), kernel_initializer='he_normal') mean=0 and variance= sqrt(2/(fan-in)) - relu works better. 
+
+
+Gradient Norm Scaling :Keras: opt = SGD(lr=0.01, momentum=0.9, clipnorm=1.0) 
+we could specify a norm of 1.0, meaning that if the vector norm for a gradient exceeds 1.0, then the values in the vector will be rescaled so that the norm of the vector equals 1.0.
+Gradient Clipping :  opt = SGD(lr=0.01, momentum=0.9, clipvalue=0.5)
+For example, we could specify a norm of 0.5, meaning that if a gradient value was less than -0.5, it is set to -0.5 and if it is more than 0.5, then it will be set to 0.5.
+https://machinelearningmastery.com/how-to-avoid-exploding-gradients-in-neural-networks-with-gradient-clipping/
+
+Gradient checking(grad check) 
+
+Optimization algorithms:
+1.batch= use when dataset is small (>=2000) 
+2.mini batch Gradient Desent :model.fit(trainX, trainy, batch_size=64) - use for large dataset.
+	typical batchsize= 64,128,256,512 ect 2 power values will be fast some how. 
+3. beta*v0+(1-beta)v1 - exponential moving average 
+4. beta*v0+(1-beta)v1/(1-beta**t) -- exponential moving average with bias corresion
+5. Gradient decent with momentum - exponential moving average cost funtion 
+6.RMSprop - w:= w- dw/Sroot of sdw + epcilon(sdw= beta2*sdw +(1-beta2)*dw**2) as a b. use larger lerning rate.
+7.Adam - w:= w- sdw1/Sroot of sdw2 + epcilon(sdw1=beta1*sdw+(1-beta1)*dw) ,sdw2= beta2*sdw +(1-beta2)*dw**2) as a b.
+8. learning rate decay- 1/1+ (decay-rate * epochs-num)  have many diifrent formulals for this. even manually select aplha.
+9.
+
+
+hyperparameter tuning:  https://www.analyticsvidhya.com/blog/2018/11/neural-networks-hyperparameter-tuning-regularization-deeplearning/
+learning rate (1st important)
+momentum (2nd important)
+adam 3
+layers (3rd important)
+hidden units (2nd important)
+learning rate delay (3d important)
+mini batch size(2nd important)
+note: try with range of values of any parameter and check which range works better and based on that range give diffrent values and get best model.
+
+Batch Normalization: it normalize with z score of z(w*x+b) value and do aphla*z-score+beta (aphla and beta again does optimization with grandent algo) 
+standadization of each out layer after w*x+b output and send that to activation. in real time batch normalization is used before the activation.
+model.add(BatchNormalization())  -from keras.layers.normalization import BatchNormalization
+
+
+activation:
+1.softmax - 
+

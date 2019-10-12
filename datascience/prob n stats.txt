@@ -1,0 +1,63 @@
+probability :
+
+1. Experiment , event, outcome(random varible) . Liklyhood of happenning event in experiment . 0-1.
+2. Binominal Distribution : p(x=k)=nck*p^k*q^n-k. n=number of events can happen, k= positive events , p= probability of positive events , q=probability of negative events.
+3. Central Limit Theorem - ( mean-sd ,mean+sd)=65% , (mean-2sd,mean+2sd) = 95%. more numarical Data more normally distributed.
+4. Events – Union, Intersection & Disjoint events.
+5. Independent, Dependent & Exclusive Events : 
+    Independent:If the occurrence of event A doesn’t affect the occurrence of event B, these events are called independent events.
+    dependent 
+	Dependent : if a card is taken from 52 cards than n will be 51 it is dependent event.
+	Mutually exclusive and Exhaustive events:Mutually exclusive events are those events where two events cannot happen together. toss a coin will get head and tail at a time?
+6.  Conditional Probability : will apply for depenent events . probability of B event given A happended is p(B/A)=p(A and B)/P(A). and - reverse U. multiplication p(A)*p(B).
+7.  Reversing the condition: if we know p(A/B) and need to find p(B/A) in that case need to go for Byes therom.https://www.analyticsvidhya.com/blog/2017/03/conditional-probability-bayes-theorem/
+8. Bayes Theorem : p(A/B)=p(B/A)*P(A)/p(B) derived from condisinal probability.
+VERY imp :Byes explanined :https://www.analyticsvidhya.com/blog/2016/06/bayesian-statistics-beginners-simple-english/ 
+
+9. probability Distribution measure : https://www.analyticsvidhya.com/blog/2017/09/6-probability-distributions-data-science/
+	1.The probabilities for discrete distributions are found using PMFs:"probability mass function " 
+	exp: Binomial, Hypergeometric, Poisson, Geometric, Negative Binomial, etc…
+	2.The probabilities for continuous distributions are found using PDFs:"probability density funtion"
+	exp:Exponential, Gamma, Pareto, Normal, Lognormal, Student’s T, F, etc…
+10 .How random variables & probability distributions are used in data science?
+11. permutation: arrangements of a given number of elements  6p3=6!/3! (n!/(n-r)!).
+12. combination : selecting of a given number of elements. 6c3=6!/3!*3* (n!/(n-r)!*r!).
+
+Descriptive Statistics: A descriptive statistic is a summary statistic that quantitatively describes or summarizes features of a collection of information. 
+
+1. Types of Variable : Dependent varible (target varible) , independent varibles.
+   Categorical and Continuous Variables : categorical : nominal , ordinal, ratio , interval . continuous : infinate , timeseries .
+2.mean , median , mode .
+3. remove of outlayers . Inter-quartile range (IQR) == Q3-Q1 exp: n=10 than Q1=3rd index values after sorted. (box plot)
+Upper outliers: Q3+1.5 ·IQR
+Lower outliers: Q1–1.5 ·IQR  
+4. filling missing values.
+5.Uni-variate Analysis : For nominal variables, a frequency table and a listing of the mode(s) is sufficient , graph and find "skewness of graph",pia chat , bar graph ect.
+6.Bi-variate Distribution : corelation for continuous varibles pearson corelation, plot scatter plot for corelation. (Z-test and t-test)
+categorical varibles: mosaic plot is common (also chi-square test).
+7.Multi-variate Analysis: . Multi-variate scatter plot, grouped box-plot (or grouped violin-plot), heat-map are used for multi-variate analysis.
+8.Function Models :  linear function has the same average rate of change on every interval,Exponential functions have variable appears as the exponent (or power) instead of the base f(x)=2^x
+
+
+Inferential Statistics :Inferential statistics allows you to make inferences about the population from the sample data
+
+1.Population & Sample:The best technique for reducing bias in sampling is randomization.
+Central Limit Theorem
+
+2.The Central Limit Theorem is used to help us understand the following facts regardless of whether the population distribution is normal or not:
+	1. the mean of the sample means is the same as the population mean
+	2. the standard deviation of the sample means is always equal to the standard error.
+	3. the distribution of sample means will become increasingly more normal as the sample size increases.
+**
+3.Confidence Intervals:
+
+diffrent kind of Anlytics:
+1.Descriptive analytics: deatails above
+2.Inferential statistical analysis infers properties about a population ,it includes testing hypotheses and deriving estimates.
+3.Predictive analytics:In business, predictive models exploit patterns found in historical and transactional data to identify risks and opportunities.
+4.Prescriptive analytics:This type of analytics explains the step-by-step process in a situation. 
+5.Associative Analysis:2 or more varibles associated systamatic way?
+
+courses: 
+basic statistics: https://www.coursera.org/learn/basic-statistics#syllabus
+

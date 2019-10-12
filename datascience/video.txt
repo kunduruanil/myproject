@@ -1,0 +1,10 @@
+
+Video Streaming Web Server:
+https://medium.com/mjrobot-org/video-streaming-web-server-5315fd48899c
+
+Raspberry Pi Cam Pan-Tilt Controlled Over Local Internet
+https://medium.com/@rovai/raspberry-pi-cam-pan-tilt-controlled-over-local-internet-49ecad3a5ee8
+
+https://www.pyimagesearch.com/2019/04/15/live-video-streaming-over-network-with-opencv-and-imagezmq/
+
+https://machinelearningmastery.com/applications-of-deep-learning-for-computer-vision/

@@ -1,0 +1,53 @@
+word embading:
+1.word2vec
+2.Glove
+
+1.lamatization vs stemming:
+lamatization: root word exp:Caring to care,better & best to good.
+stemming: remove sufex : caring to car, better to best.
+
+2. stop words 172
+
+3.tfidf: tf term frequncy : how many times term present in document. he larger is the TF-IDF value - the more relevant (important) is the keyword to the document.
+idf= inverse of document frequncy(how many documents term present in.)
+tf*log(1/df)
+
+4.pos tagging:	
+
+5.semantic Analysis : test meaning.
+
+6.syntactic analysis : rules of a formal grammar
+
+
+7.Wordnet:
+
+8.Dictionaries
+
+9.ense tagged 
+
+10.rallel corpora
+
+11.Conditional Random Fields: same as Hidden Markov Model, rule based using Regular expressions
+
+12.bag of words:This approach assumes that presence or absence of word(s) matter more than the sequence of the words(exp: count_vetorizer)
+
+13.corpora : it has many corpus like wordnet ect https://www.geeksforgeeks.org/get-synonymsantonyms-nltk-wordnet-python/
+wordnet : contains synonyms/antonyms. use word similarity, sentance similarity. etc
+
+
+
+interview qns:
+1.How will you cluster short text tweets, what problems you expect to face during this process?
+ans: word2vec or named entity recognigation.
+
+2.What are the trade-offs between statistical and rule based machine translation?
+ans:
+
+3.What is the difference between shallow parsing and dependency parsing?
+ans:shallow because you are not going to find all relation between all parts of sentence
+
+4.What are the linguistic properties that are invariant across languages
+
+5.What are the trade offs between supervised and unsupervised methods specific to NLP problems like word sense disambiguation or machine translation etc.
+
+

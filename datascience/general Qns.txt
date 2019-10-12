@@ -1,0 +1,20 @@
+1.handalling imbalensed Data Set:
+			1.Under sampling
+			2.Over sampling - smote/ADASYN https://medium.com/coinmonks/smote-and-adasyn-handling-imbalanced-data-set-34f5223e167
+			3.add weights to unbalenced data.
+			https://towardsdatascience.com/practical-tips-for-class-imbalance-in-binary-classification-6ee29bcdb8a7
+
+2.normal distribusion :We know, in a normal distribution, ~68% of the data lies in 1 standard deviation from mean (or mode, median), which leaves ~32% of the data unaffected as missing values.
+mean , median ,mode lies on same data point.
+
+3. model is suffering from low bias and high variance:
+1.Use regularization technique, where higher model coefficients get penalized, hence lowering model complexity.
+2.Use top n features from variable importance chart. May be, with all the variable in the data set, the algorithm is having difficulty in finding the meaningful signal.
+3. use bagging algorithm (like random forest) to tackle high variance problem
+4.What is the difference between covariance and correlation?
+Answer: Correlation is the standardized form of covariance.
+Covariances are difficult to compare. For example: if we calculate the covariances of salary ($) and age (years), we’ll get different covariances which can’t be compared because of having unequal scales. To combat such situation, we calculate correlation to get a value between -1 and 1, irrespective of their respective scale.
+5.What cross validation technique would you use on time series data set? Is it k-fold or LOOCV?
+6.An event is simply the outcome of a random experiment.,sample space is nothing but the collection of all possible outcomes of an experiment
+
+**7.bais and variance tread off:https://www.geeksforgeeks.org/underfitting-and-overfitting-in-machine-learning/

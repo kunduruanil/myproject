@@ -1,0 +1,74 @@
+1.Assumtions of linear Regresion:https://www.statisticssolutions.com/assumptions-of-linear-regression/
+**python from scrach :https://towardsdatascience.com/optimization-of-supervised-learning-loss-function-under-the-hood-df1791391c82
+Linear relationship :
+Multivariate normality
+No or little multicollinearity
+No auto-correlation
+Homoscedasticity
+
+keywords:
+1.interpolation: predicting data with in the range of given data to train.
+2.extrapolation  : predicting data outside the range of given data to train.
+
+measure of center tendency:
+mean=np.mean(x)
+dx=x-np.mean(x) (dx is deviation)
+variance=np.mean(dx*dx)
+standard_diveation=np.sqrt(variance)
+**
+variance is measure of single varible , co-variance is measure is 2 varibles
+co-variance:
+dx=x-np.mean(x) (dx is deviation if x)
+dy=y-np.mean(y) (dy is deviation if y)
+co-variance=np.mean(dx*dy)
+** if x,y vary in same direction co-variance is positive else opposite direction than result is negitive.
+
+correlation: values vary from -1 to 1 , standardizaion form of co-variance
+zx=dx/np.std(x)
+zy=dy/np.std(y)
+correlation=np.mean(zx*zy)
+
+taylor series :https://medium.com/@andrew.chamberlain/an-easy-way-to-remember-the-taylor-series-expansion-a7c3f9101063
+
+Residuals : diffrence y_pred - y. so positive and negitive will lead to zero. so we use squared
+Residuals_squared(rss) = np.sum(np.square(y_pred-y)) 
+**to get best a1 goal is to manimize rss.
+
+least squared error:
+a1=co-variance(x,y)/variance(x)
+a1=mean(y)-a1*mean(x)
+
+MSE: np.mean(np.square(y_pred-y)) (rss/len(rss))
+RMSE:np.sqrt(rss/len(rss))
+
+R-squared : 1-RSS/var of y
+1-np.sum(np.square(y_pred-y))/np.sum(np.square(np.mean(y)-y))
+
+standard error:
+
+maximum likelihood procedure and loglikelihood: https://campus.datacamp.com/courses/introduction-to-linear-modeling-in-python/estimating-model-parameters?ex=5
+
+types of errors:
+1.measurement error:
+  ex:broken sensor , wrongly recorded measure
+2.sampling bais:
+  ex:temparature only from may when it is hot , bais data.
+3.
+
+
+R-squared
+Adj. R-squared
+prob(F-statistic)
+Log-likelihood
+AIC
+BIC
+t
+p
+omnibus
+prob(omnibus)
+skew
+kurtosis
+Durbin-watson
+JB
+prob(jb)
+cond.no

@@ -1,0 +1,23 @@
+1.Timing. 
+2.Team .
+3.idea.
+4.bussiness model.
+5.funding.
+
+ideas:
+1. marketing stagey for pre- release of movies.
+2. partime freelance app.
+
+
+
+
+
+
+company start key points:
+:wqNamecheap for domain
+Digital Ocean for VPS
+LetsEncrypt for SSL
+Google Analytics for measure traffic
+
+
+# projects for Data Science : http://www.brontobyteanalytics.com/industries.html

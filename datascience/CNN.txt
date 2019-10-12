@@ -1,0 +1,56 @@
+
+CNN: keras.layers.convolutional.Conv2D(filters, filtersize, strides=(1, 1), padding='valid', data_format="channels_last", activation='relu')
+filters: number of filters and it will be output shape.
+filtersize : (3,3) or (4,4) etc.
+1.convalution : from keras.layers import Conv2D(n,kernal_size=3,input_shape=(28,28,1),activation='relu'). n nodes.
+2.Maxpool(n): n=2 means 2*2 matrix max pool. MaxPooling2D(pool_size=(2, 2), strides=None, padding='valid', data_format=None) max polling is done each of the channal
+3.Average pool , golble pool as well.
+
+Edge detection:
+1.horigental detection. [[1,1,1],[0,0,0],[1,1,1]]
+2.vertical detection.  [[1,0,1],[1,0,1],[1,0,1]]
+3.sobel filter . [[1,0,-1],[2,0,2],[1,0,-1]] - center pixels impoetant.
+4.schorr filter .[[3,0,-3],[10,0,-10],[3,0,-3]]
+
+case studies:
+1.LeNet-5 -(32*32*2)- con2d -5*5 (6 filter)- Avg pool - 2*2 - con2d -5*5 (16 kernals) - Avg pool 2*2 - full (120)-full(84)-out(10 softmax)-60k parameters
+2.AlexNet- (227*227*3) - con2d 11*11 (stride=4 ,96 filters)-max poll 3*3 (s-=2)- con2d 5*5 same-(256 filter)-max (3*3,s=2)-con2d 3*3 same-con2d 3*3 same-con2d 3*3 same-max pool (3*3 s=2)-full(4096)-full(4096)-outsoftmax(1000)
+3.VGG-16 -(224*224*3) all 2 con2d are 3*3 and same -1st con2d 64 filter-max 2*2 s=2 -2 con2d 128-pool-3 con2d 	256-pool-3 con2d 512-pool-3 con2d 512-pool-full 4096 -full 4096 - softmax 1000
+4.Resnet-https://towardsdatascience.com/understanding-residual-networks-9add4b664b03
+5.1*1 cnn:used to strink number of channels.
+
+Object detection:
+1.object localization 
+
+face recognization:
+1.siamese network : output 128 nodes. f(x)-x(given image) it output 128 numbers. so need to check 2 images are close enff or not - d(image1,image2)== (f(img1)-f(img2))**2 is small means same else not same.
+
+Transfer Learning:  https://keras.io/applications/
+
+cnn padding and stride***  https://www.analyticsvidhya.com/blog/2017/06/architecture-of-convolutional-neural-networks-simplified-demystified/
+stride : moving steps of filter one by one if 
+padding :  same means return same size, valid means it will consider only valid pixels of input.
+
+face recognization project:https://towardsdatascience.com/real-time-face-recognition-an-end-to-end-project-b738bb0f7348	
+1.Deep Learning architectures for object detection:Faster RCNN, YOLO and the SSD networks
+
+MODEL IMPROVEMNT:
+1. Tune Parameters:optimizer e.g SGD,rmsprop , epchos , learning rate,
+2. Image Data Augmentation : used to image over sample
+3. Deeper Network Topology
+4. Handel Overfitting and Underfitting problem
+underfit problem solution:I would suggest if there is underfitting, focus on the level of deepness of the model. You may need to add layers.. as it will give you more detailed features. 
+As we discussed above you need to tune parameters to avoid Underfitting.
+There are certain solutions to avoid overfitting
+1. Train with more data
+2. Early stopping:
+3. Cross validation
+
+cv applications:
+Object Classification: What broad category of object is in this photograph?
+Object Identification: Which type of a given object is in this photograph?
+Object Verification: Is the object in the photograph?
+Object Detection: Where are the objects in the photograph?
+Object Landmark Detection: What are the key points for the object in the photograph?
+Object Segmentation: What pixels belong to the object in the image?
+Object Recognition: What objects are in this photograph and where are they?

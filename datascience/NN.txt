@@ -1,0 +1,49 @@
+TensorFlow: https://www.tensorflow.org/guide/low_level_intro
+interview qns:https://www.analyticsvidhya.com/blog/2017/01/must-know-questions-deep-learning/
+Numpy--vs--TensorFlow
+a = tf.zeros((2,2)), b = tf.ones((2,2))
+np.sum(b, axis=1)== tf.reduce_sum(a,reduction_indices=[1])
+a.shape== a.get_shape()
+np.reshape(a, (1,4))== tf.reshape(a, (1,4))
+np.dot(a,b)==tf.matmul(a, b)
+a[0,0], a[:,0], a[0,:]== a[0,0], a[:,0], a[0,:]
+
+All Parameters keras:
+https://keras.io/models/model/#compile
+
+****how to chose number of hidden-layers-and-nodes-in-a-feedforward-NN:
+https://stats.stackexchange.com/questions/181/how-to-choose-the-number-of-hidden-layers-and-nodes-in-a-feedforward-neural-netw/136542#136542
+
+Layers :
+
+Dense: each nodes in the layers are connected with all the nodes in next layer. input_shape=(n_column,) because number od rows(samples) are not needed for any NN model.
+parameters: 
+n=number of nodes in the layer.
+input_shape=(n_column,)
+activation:'relu','sigmoid','tenh',ect.
+
+
+model.compile: parameters
+1.optimizer: regression:https://www.quora.com/Which-optimizer-in-TensorFlow-is-best-suited-for-learning-regression
+https://towardsdatascience.com/types-of-optimization-algorithms-used-in-neural-networks-and-ways-to-optimize-gradient-95ae5d39529f	
+Stochastic Gradient Descent, or ‘sgd‘, that requires the tuning of a learning rate and momentum.
+ADAM, or ‘adam‘, that requires the tuning of learning rate.
+RMSprop, or ‘rmsprop‘, that requires the tuning of learning rate.
+
+2.loss:
+Regression: Mean Squared Error or ‘mean_squared_error’.
+Binary Classification (2 class): Logarithmic Loss, also called cross entropy or ‘binary_crossentropy‘.
+Multiclass Classification (>2 class): Multiclass Logarithmic Loss or ‘categorical_crossentropy‘.
+
+3.metrics: 
+exp:metrics=['accuracy']
+
+4.loss_weights: if we give multi loss than we should give weights
+
+model.fit: parameters
+1.batch_size:how amny rows should it use at once, based on size it claculate error and change weights. https://stats.stackexchange.com/questions/153531/what-is-batch-size-in-neural-network
+2.validation_split:HOLD out set to claculate accuracy
+3.verbose=True keras will print log during traing,use for debuging
+
+
+

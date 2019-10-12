@@ -1,0 +1,14 @@
+introdution to Regression :
+output layer:model.add(Dense(1, activation='linear'))
+compile:model.compile(loss='mse', optimizer='adam')
+
+RNN: output from previous step are fed as input to the current step. each step means each layer unit.https://www.geeksforgeeks.org/introduction-to-recurrent-neural-network/
+video by standford:https://www.youtube.com/watch?v=6niqTuYFZLQ
+read to understand more:https://www.quora.com/What-is-the-best-tutorial-on-RNN-LSTM-BRNN-and-BLSTM-with-visualization
+
+LSTM Data preparation:https://stackoverflow.com/questions/39674713/neural-network-lstm-input-shape-from-dataframe/40005797#40005797
+
+
+LSTM : input_shape:should be 3 dimentinal like (a,b,c) a= number of rows(samples), b=pad size or first pad size rows ,c= number of colums(features) and shape is (b,c)
+layer LSTM() parameters:
+1.return_sequences=True when you want to use multiple hidden layers as LSTM so that it will give 3 dimentional array , default is is False.

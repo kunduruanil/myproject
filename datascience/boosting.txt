@@ -1,0 +1,16 @@
+
+Boosting is an ensemble technique to combine weak learners to create a strong learner that can make accurate predictions. 
+Boosting starts out with a base classifier / weak classifier that is prepared on the training data.
+What are base learners / weak classifiers?
+The base learners / Classifiers are weak learners i.e. the prediction accuracy is only slightly better than average. 
+A classifier learning algorithm is said to be weak when small changes in data induce big changes in the classification model.
+In the next iteration, the new classifier focuses on or places more weight to those cases which were incorrectly classified in the last round.
+
+
+XGBooster parameters:https://www.analyticsvidhya.com/blog/2016/03/complete-guide-parameter-tuning-xgboost-with-codes-python/
+n_estimater = number of trees
+min_child_weight =means something like "stop trying to split once your sample size in a node goes below a given threshold".
+gamman:https://medium.com/data-design/xgboost-hi-im-gamma-what-can-i-do-for-you-and-the-tuning-of-regularization-a42ea17e6ab6
+
+
+Adaptive Boosting- Ada Boost:

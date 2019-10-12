@@ -1,0 +1,56 @@
+https://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.RFE.html
+
+1.one hor Encoder vs Label Encoder:both will convery categarical varible in to numarical.
+Label Encoder: gender or countrys in to 0,1,2,3,ect depanding on unique categarical varibles in coloum it will covert.
+One hot Encoder : it will covert as to_categorical in keras same , as number of unique varible in coloum in to that many columns.
+if we think that model will get confused based on our data with to many categarical a 0,1,2 in incresing order than model will find pattern as that column as incresing order and 
+it will be overfit.
+
+2. feature scaling: Normalization vs Standadisation :https://sebastianraschka.com/Articles/2014_about_feature_scaling.html
+a. tree-based classifier are probably the only classifiers where feature scaling doesn’t make a difference.
+https://towardsdatascience.com/scale-standardize-or-normalize-with-scikit-learn-6ccc7d176a02
+ 1.Data Normalization: is the process of rescaling one or more attributes to the range of 0 to 1.good technique to use when you do not know the distribution of your data or
+  when you know the distribution is not Gaussian (a bell curve).
+ a.Min-Max scaling: x(normal)==x-x(min)/x(max)-x(min)
+ from sklearn.preprocessing import MinMaxScaler :create object of MinMaxScaler and fit with trin data and transform for both train and test
+ 
+ 2.data Standadisation(or  Z-score normalization (x-mean/sd)):is the process of rescaling one or more attributes so that they have a mean value of 0 and a standard deviation of 1.
+ a.Standardization assumes that your data has a Gaussian (bell curve) distribution. This does not strictly have to be true, but the technique is more effective 
+ if your attribute distribution is Gaussian.
+ from sklearn.preprocessing import StandardScaler:; create object of StandardScaler and fit with trin data and transform for both train and test
+ 
+ 3.RobustScaler: x==x-x(median)/iqr(inter quatile range) Use RobustScaler if you want to reduce the effects of outliers else min-max scaling will work better.
+ 
+ 4.Normalizer : works on the rows, not the columns! It can use l2 or l1 normalization.
+deep learning scaling http://mlexplained.com/2018/11/30/an-overview-of-normalization-methods-in-deep-learning/
+
+3.Handling Imbalenced Dataset:
+ 1.over sampling:
+	a.Random over sampling.
+	b. Cluster-Based Over Sampling:
+	c.synthetic samples :calculate the distance between him and his nearest friend, call it x. Multiply that distance by a random number between 0 and 1, call it a
+	at ax distance from value another x is kept do it for all the varible untile the limit % we given.
+	from imblearn.over_sampling import SMOTE  , use s=SMOTE(sampling_statagy={0:300,1:200},random_state=42) ,x,y=s.fit_sample(x,y)
+	d.MSMOTE:
+
+ 2.under sampling:
+    a.Random under sampling
+	
+4.handling missing Data:
+  a.Deleting Rows
+  b.Replacing With Mean/Median/Mode
+  c.Assigning An Unique Category
+  d.Predicting The Missing Values: use linear regression
+
+5.Univariate Analysis: using central tendency measures (mean, median and mode), dispersion or spread of data (range, minimum, maximum, quartiles, variance and standard deviation) 
+and by using frequency distribution tables, histograms, pie charts, frequency polygon and bar charts.
+
+6.Bi-variate Analysis:pearson corelation,chi-square test , comparision, relation ect.
+7.Multivariate data:regression analysis,path analysis,factor analysis and multivariate analysis of variance (MANOVA).
+
+8.Outlier treatment:
+
+9.Variable transformation
+10.Variable creation
+
+11.Bessels correction: is used to when we are trying to estimate population standard deviation from the sample.Bessels corrected standard deviation is less biased.

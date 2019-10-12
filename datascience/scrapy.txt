@@ -1,0 +1,1 @@
+redirections, retrying certain types of requests, HTTP caching, filtering duplicated requests, auto-throttling to avoid overloading the servers, preserving sessions/cookies across multiple requests, among many other features.

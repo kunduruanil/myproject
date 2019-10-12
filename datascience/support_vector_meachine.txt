@@ -1,0 +1,15 @@
+Larger Margin Classification: if c is large than it is bais to outlayers. 
+
+cost funtion : https://towardsdatascience.com/optimization-loss-function-under-the-hood-part-iii-5dff33fa015d
+     C*sum(y*cost1(W.T*X)+(1-y)cost0(W.T*X))+rezularization(1/2*sum(W**2))) if c=1/lamda them svm cost and logistic will be same.
+	 
+hypothasis:
+h(x) = f(x)>=0 than 1 else 0
+
+
+support vectors are vectors that touches edges of data points, if 2 classes than 2 support vectors will form and it will find vector which is maximisus distance
+from support vectors for finding best vector.
+
+kernals are used for non linear data points to make linearaly separible.
+
+

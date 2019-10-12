@@ -1,0 +1,54 @@
+1.AUC
+
+
+2.ROC
+
+
+3.AUC-ROC : https://towardsdatascience.com/understanding-auc-roc-curve-68b2303cc9c5
+it is mainly used for binary classification model. more the AUC model is better. max is 1 and min is 0.
+for multiclass model it is one over all , n class will have n AUC-ROC curve.
+4.Logloss
+
+
+5.gendralization of model:
+
+
+
+6.data likage:
+
+
+7.Cross Validation:https://www.analyticsvidhya.com/blog/2018/05/improve-model-performance-cross-validation-in-python-r/
+common methods:
+	1.The Validation set Approach :train, validation = train_test_split(data, test_size=0.50, random_state = 5)
+	2.Leave out one cross validation (LOOCV) : from sklearn.model_selection import LeaveOneOut
+	3.k-fold cross validation
+	4.Stratified k-fold cross validation
+	5.Adversarial validation
+	6.Cross validation for time series**	
+	7.Custom cross validation techniques
+	
+2.Leave out one cross validation (LOOCV): We repeat the cross validation process n times (where n is number of data points) which results in a higher execution time
+
+
+
+
+8.precesion : tp/(tp+fp) defnation: out of all positivly predited values as positive how many are turly predited.
+9.recall/Sensitivity : tp/(tp+fn) defnation: out of all real positive smaples how many are correctly predited.
+10.f1 score: harmonic mean of precesion and recall. it removes extream values of either precesion or recall . so f1 will be high if both are better.
+11.confusion matrix : predited
+                 negative positive
+       negative   TN	    FP			
+Actual positive   FN        TP
+
+12.cassificattion report : 
+
+13.k fold crossvalidation: we need to split out data in to k diffrent sets and test model how data is perfoming on each cross validaation and do gendralization of a model.
+exp:when we are going to other countries they will check our heath with respect to cold condition or very hot condition.
+   1.Variations on Cross-Validation
+   a.Train/Test Split:
+   b.LOOCV: Taken to another extreme, k may be set to the total number of observations in the dataset such that each observation is given a chance to be the held out of the dataset.
+   This is called leave-one-out cross-validation, or LOOCV for short.
+   c.Stratified: The splitting of data into folds may be governed by criteria such as ensuring that each fold has the same proportion of observations with a given categorical value, 
+   such as the class outcome value. This is called stratified cross-validation.
+   d.Repeated: This is where the k-fold cross-validation procedure is repeated n times, where importantly,
+   the data sample is shuffled prior to each repetition, which results in a different split of the sample.

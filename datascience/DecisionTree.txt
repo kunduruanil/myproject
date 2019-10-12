@@ -1,0 +1,39 @@
+calucating Decision tree manually: https://medium.com/@rishabhjain_22692/decision-trees-it-begins-here-93ff54ef134
+https://scikit-learn.org/stable/modules/tree.html
+https://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeClassifier.html
+
+sklearn.tree.DecisionTreeClassifier(criterion=’gini’, splitter=’best’, max_depth=None, min_samples_split=2, min_samples_leaf=1, min_weight_fraction_leaf=0.0,
+ max_features=None, random_state=None, max_leaf_nodes=None, min_impurity_decrease=0.0, min_impurity_split=None, class_weight=None, presort=False)
+parameters:
+
+1.criterion : gini , entropy
+2.splitter : best , random is used for random forest!
+
+3.max_depth: depth of tree default until all leaves are pure or until all leaves contain less than ""min_samples_split"" samples. used for "regularization".
+
+4.min_samples_split :The minimum number of samples required to split an internal node. used for "regularization".
+*ceil(min_samples_split * n_samples) is he minimum number of samples for each split.
+
+5.min_samples_leaf:  same as above but at leaf node.
+
+6.min_weight_fraction_leaf:
+
+7.max_features:
+
+8.random_state: seed number
+9.max_leaf_nodes:Grow a tree with max_leaf_nodes in best-first fashion. Best nodes are defined as relative reduction in impurity. If None then unlimited number of leaf nodes.
+10.min_impurity_decrease:
+11.min_impurity_split : Deprecated 
+12.
+
+
+
+parameters explanined: https://towardsdatascience.com/scikit-learn-decision-trees-explained-803f3812290d
+
+parameter change and how it words: https://medium.com/@mohtedibf/indepth-parameter-tuning-for-decision-tree-6753118a03c3
+1.max_depth  : We see that our model overfits for large depth values. The tree perfectly predicts all of the train data, however, it fails to generalize the findings for new data
+2.min_samples_split:This is an underfitting case.
+3.min_samples_leaf : same as above leaf node :Increasing this value may cause underfitting. tune value np.linspace(0.1, 0.5, 5)
+4.max_features : it will over fit when we reduction of feature count. tune :max_features = list(range(1,train.shape[1]))
+
+tune parameter and explanined:https://medium.com/datadriveninvestor/decision-tree-adventures-2-explanation-of-decision-tree-classifier-parameters-84776f39a28

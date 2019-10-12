@@ -1,0 +1,37 @@
+basics:https://www.analyticsvidhya.com/blog/2017/09/6-probability-distributions-data-science/
+https://www.analyticsvidhya.com/blog/2017/09/naive-bayes-explained/
+
+naive baies :“Naive” i.e not correlated to each other. probability of estimator is not taken seroiusly!.
+bais thream:
+p(a/b)=p(a)*p(b/a)/p(b)
+Max(P(feature|h).P(h))
+https://www.geeksforgeeks.org/naive-bayes-classifiers/
+1.find the frequncy table with each fature and target varible with that find probability-distributions.
+2.
+
+1.Bernoulli NB: You then build a feature that captures this as 0 if it’s not present and 1 if it is. The algorithm will use this concept to classify emails as spam/ham 
+
+2.Multinomial : Similarly as before, we notice that the more dollar signs ($) there are in an email, the more likely that email is spam.
+
+3.Gaussian : data should be continues and normally distributed.
+
+4.Why is naive Bayes so ‘naive?
+naive Bayes is so ‘naive’ because it assumes that all of the features in a data set are equally important and independent. As we know, these assumption are rarely true in real world scenario.
+
+interview qns
+https://www.analyticsvidhya.com/blog/2016/09/40-interview-questions-asked-at-startups-in-machine-learning-data-science/
+
+5.prior probability:
+
+
+6.likelihood and marginal likelihood: likelihood is probability of predicting 1 or 0 in binary classification. marginal likelihood is probability of happening any of the data to 1 or 0.
+
+7.how to handle Zero frequncy in naive bayes-classifier: add 1 insterd of 0 place in table or Laplace smoothing.
+
+8.Laplace smoothing: probability of getting a word in corpus is 1 then it addeds prior 1 to numarator and total number of values to denominator.https://medium.com/syncedreview/applying-multinomial-naive-bayes-to-nlp-problems-a-practical-explanation-4f5271768ebf
+example:https://www.quora.com/Could-someone-explain-Laplacian-smoothing-or-1-up-smoothing
+
+9.The difference is that while MultinomialNB works with occurrence counts, BernoulliNB is designed for binary/boolean features.
+
+maths of diffrent naive baies algorithm:
+https://scikit-learn.org/stable/modules/naive_bayes.html
