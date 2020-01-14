@@ -1,0 +1,13 @@
+Central Limit Thream:
+1.sample means are always normally distribution
+2.consider fairly larger number of varibles.
+intravel(pMean)- mean(s)+-(se*zscore)
+
+what is hypothesis? assumention
+ simple exps: 
+ 1. define null hypothasis , h0 is no action continue the flow, 
+     ho: no diffrence.
+     The null hypothesis should always contain a statement of equality.
+
+
+ 2. aternative hypothasis never has a symbol with an equal in it.
